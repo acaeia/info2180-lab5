@@ -1,4 +1,78 @@
 body{
-  background-color: #fcf3e0;
+  background-image: url(world-in-geographic-projection.jpg);
+  background-repeat: repeat-y;
+  background-size: 100%;
+  text-align: center;
+}
 
+h1{
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  font-style: normal;
+  text-align: center;
+  color: white;
+}
+
+button{
+  background-color: #222725;
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  margin: 5px 10px 5px 0px; /*top right bottom left */
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #78e2b2;
+  color: #222725;
+  transition: 0.3s;
+}
+
+table, th,td {
+  border: thin, solid, black;
+  border-collapse: collapse;
+  border-radius: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Cabin", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+th, td{
+  padding: 10px;
+  text-align: center;
+}
+
+th{
+  background-color: rgb(197, 219, 241);
+}
+
+tr:nth-child(even) {background-color: #fff;}
+tr:nth-child(odd) {background-color: rgb(147, 157, 205);}
+
+label{
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+}
+
+input{
+  padding: 10px;
+  width: 50%;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }

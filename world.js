@@ -3,14 +3,19 @@ window.onload = function(){
   var lookupbtn = document.getElementById('lookup');
   var lookcitiesbtn = document.getElementById('lookupcities')
   var search = document.getElementById('country');
+  var result = document.getElementById('result');
 
-  lookupbtn.addEventListener("onclick", function(){
+  lookupbtn.addEventListener("click", function(){
 
     var query = search.value.trim();
     const httpRequest = new XMLHttpRequest();
     var url = "world.php";
-    url += "?country=" + encodeURIComponent(country);
+    url += "?country=" + encodeURIComponent(query);
   
+    if (query){
+      url += "&lookup=" + "";
+    }
+
     httpRequest.onreadystatechange = function(){
       if (httpRequest.readyState == XMLHttpRequest.DONE){
         if (httpRequest.status == 200){
@@ -27,14 +32,14 @@ window.onload = function(){
   
   })
 
-  lookcitiesbtn.addEventListener("onclick", function(){
+  lookcitiesbtn.addEventListener("click", function(){
     var query2 = search.value.trim();
     const httpRequest = new XMLHttpRequest();
     var url = "world.php";
-    url += "?country=" + encodeURIComponent(country);
+    url += "?country=" + encodeURIComponent(query2);
 
-    if (type==='cities'){
-      url += "&lookupcities";
+    if (query2){
+      url += "&lookup=" + "cities";
     }
   
     httpRequest.onreadystatechange = function(){
